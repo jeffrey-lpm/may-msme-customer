@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { usePostLoginMutation, usePostSignUpMutation } from "@/state/api";
-
+import may_logo from "../assets/maylogo.png";
 const Login = ({ setUser, setSecret }) => {
   const [isRegister, setIsRegister] = useState(false);
   const [username, setUsername] = useState("");
@@ -21,20 +21,16 @@ const Login = ({ setUser, setSecret }) => {
       setUser(username);
       setSecret(password);
     }
-  }, [resultLogin.data]); // eslint-disable-line
+  }, [resultLogin.data]); 
 
   return (
     <div className="login-page">
+      <div className="top"></div>
       <div className="login-container">
-        <h2 className="title">CHATGPT APP</h2>
-        <p
-          className="register-change"
-          onClick={() => setIsRegister(!isRegister)}
-        >
-          {isRegister ? "Already a user?" : "Are you a new user?"}
-        </p>
-
+      <center><img src={may_logo} alt="Logo" className="logo" /></center>
+        <h2 className="title">MAY LOGIN & SIGHN UP</h2>
         <div>
+          
           <input
             className="login-input"
             type="text"
@@ -53,15 +49,24 @@ const Login = ({ setUser, setSecret }) => {
 
         <div className="login-actions">
           {isRegister ? (
-            <button type="button" onClick={handleRegister}>
+            <button type="button" onClick={handleRegister} className="btn-login">
               Register
             </button>
           ) : (
-            <button type="button" onClick={handleLogin}>
+            <button type="button" onClick={handleLogin} className="btn-login">
               Login
             </button>
+
           )}
         </div>
+
+        <p
+          className="register-change"
+          onClick={() => setIsRegister(!isRegister)}
+        >
+          {isRegister ? "Already a user?" : "Are you a new user?"}
+        </p>
+
       </div>
     </div>
   );
