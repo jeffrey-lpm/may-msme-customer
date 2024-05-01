@@ -1,22 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap");
-
+$black-400:black;
 $gray-300: #a3a3a3;
 $gray-400: #858585;
 $primary-400: #35596c;
-$primary-500: #0f2936;
-$primary-600: #091d2b;
+$primary-500: #339999;
+$primary-600: #339999;
 $primary-700: #051926;
 $primary-800: #060f14;
 $secondary-300: #7ac5d7;
-$secondary-500: #219ebc;
+$secondary-500: #000000;
 $secondary-800: #00b5e0;
-$tertiary-50: #fff8e6;
+$tertiary-50: #000000;
 $tertiary-100: #fff1cd;
 $quaternary-500: #fb8500;
-
+$gray :#535353;
 html,
 body,
 #root,
+
 .app {
   height: 100%;
   width: 100%;
@@ -24,6 +25,22 @@ body,
   padding: 0;
 
   font-family: "Rubik", sans-serif;
+}
+.btn-log{
+  margin-top: 50vh;
+    /* color: red; */
+    background-color: black;
+}
+.logo-container {
+  align-items: center;
+  text-align: center; 
+  margin-bottom: 20px; 
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 
 .layout {
@@ -34,7 +51,13 @@ body,
 .servers {
   background-color: $primary-500;
 }
-
+.top{
+  width: 100%;
+  position: absolute;
+  height: 30px;
+  background-color: $gray;
+  top: 0px;
+}
 .flexbetween {
   display: flex;
   justify-content: space-between;
@@ -77,18 +100,24 @@ body,
   background-color: $primary-600;
   color: $tertiary-50;
 }
-
+.login-input:focus{
+  background-color: $primary-600;
+}
 .register-change {
   text-decoration: underline;
   color: $secondary-500;
+  transition: 2s;
 }
 
 .register-change:hover {
+  transition: 2s;
   text-decoration: underline;
   color: $tertiary-100;
   cursor: pointer;
 }
-
+.title{
+  text-align: center;
+}
 /* Chat Styling */
 .ce-chat-engine {
   color: $tertiary-50 !important;
@@ -155,6 +184,7 @@ body,
 }
 
 .message-form-container {
+  background-color: $primary-600;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,13 +197,15 @@ body,
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  border: 1px solid $primary-400 !important;
+  border: 1px solid #000000 !important;
   border-radius: 5px !important;
   padding: 5px 15px 5px 20px !important;
   background: none;
   width: 80%;
 }
-
+input::placeholder {
+  color: #000000; /* Change the color as needed */
+}
 .message-form-preview-image {
   width: 40px;
   height: 40px;
@@ -259,6 +291,7 @@ body,
 }
 
 .ce-chat-form-title {
+  display: block;
   top: 20px !important;
   font-family: "Rubik" !important;
   font-weight: bold !important;
@@ -326,6 +359,7 @@ body,
 }
 
 .chat-header {
+  background-color: $primary-600;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -468,7 +502,7 @@ body,
 }
 
 .ce-avatar {
-  background-color: $secondary-500 !important;
+  background-color: #b5b5b5 !important;
 }
 
 .ce-avatar-status {
@@ -494,7 +528,7 @@ body,
 
 .ce-dropdown-label {
   padding: 30px 25px 10px 25px !important;
-  color: $gray-400 !important;
+  color: $tertiary-100 !important;
   background-color: $primary-600 !important;
   font-family: "Rubik" !important;
   font-weight: 300 !important;
@@ -513,14 +547,77 @@ body,
   border: 1px solid $primary-400 !important;
   top: 6px !important;
 }
-
+.btn-login{
+  width: 200px;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+}
 .ce-autocomplete-input {
   margin: 10px 0 !important;
-  background-color: $primary-800 !important;
-  color: $tertiary-50 !important;
+  background-color: #636363 !important;
+  color: #ffffff !important;
   font-family: "Rubik" !important;
-  border: 1px solid $primary-400 !important;
+  border: 1px solid #ffffff !important;
   border-radius: 5px !important;
+}
+.whatsapp-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  // width: 250px;
+  background-color: #ededed;
+  border-right: 1px solid #ccc;
+}
+
+.additional-menu {
+  padding: 20px;
+}
+
+.main-content {
+  flex: 1;
+  overflow: hidden; /* Hide overflow to prevent scrolling */
+}
+.modern-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  // width: 250px;
+  background-color: #f0f2f5;
+  padding: 20px;
+  border-right: 1px solid #dcdcdc;
+}
+
+.additional-menu h2 {
+  margin-bottom: 20px;
+}
+
+.additional-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.additional-menu button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.additional-menu button:hover {
+  background-color: #0056b3;
+}
+
+.main-content {
+  flex: 1;
+  overflow: hidden; /* Hide overflow to prevent scrolling */
 }
 
 .ce-danger-button {
