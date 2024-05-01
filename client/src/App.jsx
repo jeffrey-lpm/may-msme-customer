@@ -6,8 +6,8 @@ import Login from "@/components/login";
 function App() {
   const [user, setUser] = useState(null);
   const [secret, setSecret] = useState(null);
-  const isAuth = Boolean(user) && Boolean(secret);
-
+   const isAuth = Boolean(user) && Boolean(secret);
+ 
   return (
     <div className="app">
       <BrowserRouter>
